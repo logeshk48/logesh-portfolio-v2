@@ -1,6 +1,7 @@
 import './App.css'
 import ProfileCard from './ProfileCard'
 import logeshImg from './assets/logesh.jpg'
+import TechStack from './components/TechStack/TechStack'
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
             </div>
           </div>
         </section>
+        <TechStack />
       </main>
     </div>
   )
