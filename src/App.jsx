@@ -2,25 +2,11 @@ import './App.css'
 import ProfileCard from './ProfileCard'
 import logeshImg from './assets/logesh.jpg'
 import TechStack from './components/TechStack/TechStack'
-
+import Navbar from "./components/Navbar/Navbar";
 function App() {
   return (
     <div className="app-shell">
-      <nav className="navbar">
-        <div className="logo-wrap">
-          <div className="logo-dot"></div>
-          <div className="logo">LOGESH</div>
-        </div>
-
-        <ul className="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-
-        <a href="#contact" className="nav-button">Let’s Talk</a>
-      </nav>
+      <Navbar />
 
       <main>
         <section id="home" className="hero-section">
@@ -52,6 +38,9 @@ function App() {
           </div>
         </section>
         <TechStack />
+        <section id="projects" style={{ height: "60vh" }}></section>
+        <section id="contact" style={{ height: "60vh" }}></section>
+        
       </main>
     </div>
   )
