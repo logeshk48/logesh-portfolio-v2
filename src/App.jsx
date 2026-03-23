@@ -1,38 +1,58 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-
-import "./index.css";
+import './App.css'
+import ProfileCard from './ProfileCard'
+import logeshImg from './assets/logesh.jpg'
 
 function App() {
   return (
-    <>
-      <Navbar />
+    <div className="app-shell">
+      <nav className="navbar">
+        <div className="logo-wrap">
+          <div className="logo-dot"></div>
+          <div className="logo">LOGESH</div>
+        </div>
+
+        <ul className="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <a href="#contact" className="nav-button">Let’s Talk</a>
+      </nav>
 
       <main>
-        <section id="home">
-          <Hero />
-        </section>
+        <section id="home" className="hero-section">
+          <div className="hero-grid">
+            <div className="hero-left">
+              <p className="hero-tag">AI POWERED WEB DEVELOPER</p>
 
-        <section id="about">
-          <About />
-        </section>
+              <h1>
+                Building modern,
+                <span> premium web experiences</span>
+              </h1>
 
-        <section id="projects">
-          <Projects />
-        </section>
+              <p className="hero-description">
+                I’m Logesh — crafting clean, modern, and powerful web experiences with a
+                focus on performance, design, and real-world impact.
+              </p>
+            </div>
 
-        <section id="contact">
-          <Contact />
+            <div className="hero-right">
+              <ProfileCard
+                name="Logesh"
+                title="AI Powered Web Developer"
+                handle="logesh.dev"
+                status="Available"
+                contactText="Contact Me"
+                avatarUrl={logeshImg}
+              />
+            </div>
+          </div>
         </section>
       </main>
-
-      <Footer />
-    </>
-  );
+    </div>
+  )
 }
 
-export default App;
+export default App
